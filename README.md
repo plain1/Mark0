@@ -1,2 +1,2 @@
-# NFTSNS-Mark0
+# Mark0
 아직 미완
