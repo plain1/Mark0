@@ -1,0 +1,110 @@
+{%extends "base.html"%}
+<!-- sub_sidebar -->
+<div class="sub__sidebar">
+    <div style="display:flex; margin:1rem">
+      <div class="sidebarOption active sidebar__section">
+        <span class="material-icons"style="padding:0.3rem;">
+          try
+        </span>
+        <h4>NFT채팅</h4>
+      </div>
+
+      <div class="sidebarOption sidebar__section">
+        <span class="material-icons" style="padding:0.3rem;">
+          chat
+        </span>
+        <h4>일반채팅</h4>
+      </div>
+    </div>
+    
+        
+    <div class="post" style="margin-top: 5px;">
+      <div class="post__avatar">
+          <img
+          src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+          alt=""
+          />
+      </div>
+      
+      <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                NFT 채팅방명
+              </h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post__avatar">
+          <img
+          src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+          alt=""
+          />
+      </div>
+      
+      <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                NFT 채팅방명
+              </h3>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="post">
+      <div class="post__avatar">
+          <img
+          src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+          alt=""
+          />
+      </div>
+      
+      <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                NFT 채팅방명
+              </h3>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- sub sidebar ends -->
+
+  <!-- home page -->
+  <div class="main__chat">
+      <div class="main__header">
+      <h2>Chat</h2>
+      </div>
+
+  <!-- chat -->
+    <!--채팅창-->
+    <div class="wrap">
+        <div class="chat ch1">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <div class="textbox">안녕하세요. 반갑습니다.</div>
+        </div>
+        <div class="chat ch2">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <div class="textbox">안녕하세요.그동안 잘 지내셨어요?</div>
+        </div>
+        <div class="chat ch1">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <div class="textbox">네! 요즘 어떻게 지내세요?</div>
+        </div>
+        <div class="chat ch2">
+            <div class="icon"><i class="fa-solid fa-user"></i></div>
+            <div class="textbox">코로나때매 불편하네요 얼른 좀 잠잠해졌으면 좋겠습니다요!</div>
+        </div>
+    <!--채팅창-->
+        <textarea name="addtext" rows="5" cols ="100"></textarea>
+        <br>
+        <button type="submit">생성</button><br>
+        
+    </div>
+{%endblock}

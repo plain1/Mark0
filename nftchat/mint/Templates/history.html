@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <title>구매 확인</title>
+</head>
+<body style="margin: 3%;"><a href="{% url 'trade'%}">Trade</a>
+<h1>구매 확정</h1>
+<h3>결제가 완료된 목록입니다</h3>
+<br>
+<div class="histories">
+    {% for history in histories %}
+    <div>
+        <h2>{{history.shopped_date}}</h2>
+        <h3>구매 물품: {{history.nft_name}}</h3>
+        <h5>가격: {{history.nft_price}}</h5>
+    </div>
+    {% endfor %}
+</div>
+</body>
+

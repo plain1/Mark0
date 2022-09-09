@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <title>결제 승인</title>
+</head>
+<body style="margin: 3%;">
+<div class="mt-5 pt-5 row justify-content-center">
+    <h2 class="text-center my-5 col-12">결제가 완료되었습니다!</h2>
+    <div class="col-4 p-5 bg-light">
+        <h3 class="text-center my-5">주문자 정보</h3>
+        <div>
+            <div class="my-3 row">
+                <strong>주문번호</strong>
+                <div>{{ response.partner_order_id }}</div>
+            </div>
+            <div class="my-3 row">
+                <strong>상품명</strong> 
+                <div>{{ response.nft_name }}</div>
+            </div>
+            <div class="my-3 row">
+                <strong>결제금액</strong>
+                <div>{{ amount }}원</div>
+            </div>
+            <div class="my-3 row">
+                <strong>결제승인시각</strong>
+                <div>{{ response.approved_at }}</div>
+            </div>
+        </div>
+        <div>
+            <a href="{% url 'home'%}" class="save_btn">메인으로 돌아가기</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

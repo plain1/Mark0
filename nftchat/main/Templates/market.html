@@ -1,0 +1,415 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../../static/images/wolf.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link type="text/css" href="{%static 'css/style.css' %}" rel="stylesheet">
+  <link type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.3.1
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="main.html" class="logo d-flex align-items-center">
+        <img src="../../static/images/wolf.png" alt="">
+        <span class="d-none d-lg-block">NFT SNS</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-chat-left-text"></i>
+            <span class="badge bg-success"></span>
+          </a><!-- End Messages Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+            <li class="dropdown-header">
+              nft 채팅방
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">생성하기</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-header">
+              일반 채팅방
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">생성하기</span></a>
+            </li>
+
+          </ul><!-- End Messages Dropdown Items -->
+
+        </li><!-- End Messages Nav -->
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2"></span>
+          </a><!-- End Profile Iamge Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <!--hrf 연결 변경-->
+        <a class="nav-link " href="{% url 'main' %}">
+          <span class="material-icons"> home </span>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <!--hrf 연결 변경-->
+        <a class="nav-link " href="index.html">
+          <span class="material-icons">people</span>
+          <span>friends</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <!--hrf 연결 변경-->
+        <a class="nav-link " href="index.html">
+          <span class="material-icons">question_answer</span>
+          <span>chat room</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <!--hrf 연결 변경-->
+        <a class="nav-link " href=" ">
+          <span class="material-icons">store</span>
+          <span>market</span>
+        </a>
+      </li>
+
+      <button class="sidebar__button">nft minting</button>
+
+    </ul>
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <section class="section dashboard">
+      <div class="row">
+
+        
+          <!-----nft마켓 만들기 -->
+           <!-- contents starts -->
+
+           <div class="pagetitle">
+            <h1>MARKETLIST</h1>
+             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              
+                <div class="text" style="padding-top: 1rem;"><a class="btn btn-outline-dark mt-auto" href="#">NFT등록</a></div>
+              
+            </div>
+          </div><!-- End Page Title -->
+
+
+    <div class="marketlist">
+     
+      <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta name="description" content="" />
+          <meta name="author" content="" />
+          <title>Shop Homepage - Start Bootstrap Template</title>
+          <!-- Favicon-->
+          <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+          <!-- Bootstrap icons-->
+          <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+  
+          <!-- Core theme CSS (includes Bootstrap)-->
+          <link href="css/styles.css" rel="stylesheet" />
+      </head>
+      <body>
+         
+          <!-- Section-->
+          <section class="py-1">
+              <div class="container px-4 px-lg-5 mt-5">
+                  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                      <!-- Product price-->
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                             
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                      
+                                      <!-- Product price-->
+                                      
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                              
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                      <!-- Product price-->
+                                      <span class="text-muted text-decoration-line-through"></span>
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                    
+                                      <!-- Product price-->
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                             
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                      <!-- Product price-->
+                                    
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                      <!-- Product price-->
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                     
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                 
+                                      <!-- Product price-->
+                                
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col mb-5">
+                          <div class="card h-100">
+                              <!-- Product image-->
+                              <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                              <!-- Product details-->
+                              <div class="card-body p-4">
+                                  <div class="text-center">
+                                      <!-- Product name-->
+                                      <h5 class="fw-bolder">NFTNAME</h5>
+                                  
+                                      <!-- Product price-->
+                                      TOKEN ID
+                                  </div>
+                              </div>
+                              <!-- Product actions-->
+                              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                  <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">PAYMENT</a></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+        
+          <!-- Bootstrap core JS-->
+          <script src="{% static 'js/scripts.js'%}"></script>
+          <!-- Core theme JS-->
+          <script src="js/scripts.js"></script>
+      </body>
+  </html>
+  
+  </div>
+  <!-- contents ends -->
+          <!----end nft마켓--->
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Template Main JS File -->
+  <script src="../../static/js/main.js"></script>
+  <script src="../../static/vendor/bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

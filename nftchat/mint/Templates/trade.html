@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <title>거래하자</title>
+</head>
+<body style="margin: 3%;">
+<a href="{% url 'history'%}">구매 NFT 확인</a>
+<br>
+<h3>⬇️ 결제 버튼을 눌러주세요 ⬇️</h3>
+<div class="kakaopay_payments">
+    <h1 class="kakaopay_title">KAKAO PAY</h1>
+    <form action="{% url 'home'%}" method="post" class="kakaopay_pay">
+        {% csrf_token %}
+        <table>
+            {{form.as_table}}
+        </table>
+        <input type="submit" class="kakaopay_btn" value="카카오페이로 결제하기">
+    </form>
+</div>
+</body>
+</html>
